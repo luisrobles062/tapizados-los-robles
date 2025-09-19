@@ -71,6 +71,10 @@
       .testis{grid-template-columns:1fr}
       .contact{grid-template-columns:1fr}
     }
+    /* Galería: recorte uniforme y pies de foto */
+    .grid figure{margin:0}
+    .grid img{width:100%;height:260px;object-fit:cover}
+    .grid figcaption{font-size:.9rem;color:#475569;margin-top:.35rem}
   </style>
   <script type="application/ld+json">
   {
@@ -169,14 +173,16 @@
       <h2>Galería (antes / después)</h2>
       <p class="lead">Fotos reales de nuestros trabajos.</p>
 
-      <!-- TUS IMÁGENES SUBIDAS -->
+      <!-- Si tu archivo real fuera PNG, cambia .jpg por .png en las dos líneas de abajo -->
       <div class="grid" aria-label="Galería de trabajos">
-        <img src="fotos/antes-1.jpg" alt="Antes - mecedora 1">
-        <img src="fotos/despues-1.jpg" alt="Después - mecedora 1">
-        <!-- Cuando subas más, duplica estas líneas:
-        <img src="fotos/antes-2.jpg" alt="Antes - mecedora 2">
-        <img src="fotos/despues-2.jpg" alt="Después - mecedora 2">
-        -->
+        <figure>
+          <img src="fotos/antes-1.jpg?v=2" alt="Antes - mecedora 1" loading="lazy">
+          <figcaption>Antes – mecedora 1</figcaption>
+        </figure>
+        <figure>
+          <img src="fotos/despues-1.jpg?v=2" alt="Después - mecedora 1" loading="lazy">
+          <figcaption>Después – mecedora 1</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -198,7 +204,6 @@
         <h2>Contacto y cotizaciones</h2>
         <p class="lead">Cuéntanos qué mueble quieres tapizar o restaurar y, si puedes, adjunta fotos. Respondemos el mismo día.</p>
 
-        <!-- Cambia el correo por el tuyo real si deseas usar mailto -->
         <form action="mailto:tapizadoslosrobles@gmail.com" method="post" enctype="text/plain">
           <input type="text" name="Nombre" placeholder="Tu nombre" required>
           <input type="tel" name="Teléfono" placeholder="Tu teléfono" required>
@@ -231,4 +236,15 @@
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
       <div>© <span id="y"></span> Tapizados Los Robles • Todos los derechos reservados</div>
       <div style="display:flex;gap:.7rem;align-items:center">
-        <a href="#" aria-label="Política d
+        <a href="#" aria-label="Política de privacidad">Privacidad</a>
+        <span aria-hidden="true">•</span>
+        <a href="#" aria-label="Términos de servicio">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
