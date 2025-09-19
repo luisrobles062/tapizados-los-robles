@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tapizados y Restauración de Muebles | Tapizados Los Robles</title>
+  <meta name="description" content="Tapizados finos y restauración de mecedoras, sillas y muebles. Servicio a domicilio en Tasajera, Magdalena. Presupuesto por WhatsApp." />
+  <meta property="og:title" content="Tapizados y Restauración de Muebles | Tapizados Los Robles" />
+  <meta property="og:description" content="Especialistas en mecedoras y muebles. Presupuesto gratis por WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="theme-color" content="#2F5D3A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#2F5D3A;      /* Verde bosque */
+      --brand-2:#EAF1EC;    /* Claro complementario */
+      --ink:#0f172a;
+      --muted:#475569;
+      --bg:#ffffff;
+      --ok:#16a34a;
+      --warn:#f59e0b;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(15,23,42,.10);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block;border-radius:12px}
+    .container{width:min(1100px,92%);margin-inline:auto}
+    .btn{display:inline-flex;gap:.6rem;align-items:center;background:var(--brand);color:#fff;padding:.9rem 1.1rem;border-radius:999px;font-weight:700;box-shadow:var(--shadow);transition:.2s transform}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.ghost{background:#fff;color:var(--brand);border:2px solid var(--brand)}
+    header{position:sticky;top:0;background:rgba(255,255,255,.86);backdrop-filter:saturate(1.5) blur(6px);border-bottom:1px solid #eef;z-index:50}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:.7rem 0}
+    nav .brand{display:flex;align-items:center;gap:.7rem;font-weight:900}
+    nav .brand .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--brand),#9a8cf1);box-shadow:var(--shadow)}
+    nav .links{display:flex;gap:1rem}
+    .hero{padding:4.5rem 0 3rem;}
+    .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center}
+    .hero h1{font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.05;margin:0 0 1rem}
+    .hero p{font-size:1.05rem;color:var(--muted);margin:0 0 1.3rem}
+    .badges{display:flex;gap:.7rem;flex-wrap:wrap;margin:.7rem 0 1.4rem}
+    .badge{background:var(--brand-2);color:#1d3a26;border:1px dashed #9ec5a9;padding:.45rem .7rem;border-radius:999px;font-weight:600;font-size:.9rem}
+    .hero-card{background:#fff;border:1px solid #eef;border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow);display:grid;gap:1rem}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .ph{display:grid;place-items:center;aspect-ratio:4/3;background:linear-gradient(145deg,#fafafa,#f3f4f6);border:1px dashed #e5e7eb;border-radius:12px;color:#94a3b8;font-weight:700}
+    .section{padding:3rem 0}
+    .section h2{font-size:1.8rem;margin:0 0 .6rem}
+    .section p.lead{color:var(--muted);margin-top:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:#fff;border:1px solid #eef;border-radius:var(--radius);padding:1.1rem;box-shadow:var(--shadow)}
+    .card h3{margin:.2rem 0 .4rem}
+    .list{list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:.45rem}
+    .list li{display:flex;gap:.6rem;align-items:flex-start}
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--ok);margin-top:.5rem;flex:0 0 8px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+    .cta{display:flex;flex-wrap:wrap;gap:.7rem}
+    .before-after{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .ba-item{position:relative}
+    .ba-item span{position:absolute;left:.7rem;top:.7rem;background:rgba(0,0,0,.65);color:#fff;padding:.25rem .5rem;border-radius:6px;font-size:.85rem}
+    .testis{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .quote{background:#fff;border:1px solid #eef;border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow);font-size:.98rem}
+    .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
+    form{display:grid;gap:.7rem}
+    input, textarea{width:100%;padding:.8rem;border-radius:12px;border:1px solid #e5e7eb;font:inherit}
+    textarea{min-height:120px;resize:vertical}
+    footer{padding:2rem 0;border-top:1px solid #eef;color:#64748b}
+    @media (max-width: 880px){
+      .hero .wrap{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .before-after{grid-template-columns:1fr}
+      .testis{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Tapizados Los Robles",
+    "image":"",
+    "description":"Tapizados y restauración de mecedoras, sillas y muebles",
+    "areaServed":"Tasajera, Magdalena",
+    "telephone":"+57 300 248 5609",
+    "address":{"@type":"PostalAddress","addressLocality":"Tasajera, Magdalena, Colombia"},
+    "url":"",
+    "openingHours":"Mo-Sa 08:00-15:00",
+    "sameAs":["https://facebook.com/tapizadoslosrobles"]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <span>Tapizados Los Robles</span>
+        </div>
+        <div class="links">
+          <a href="#servicios">Servicios</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container wrap">
+      <div>
+        <h1>Tapizados y restauración <br>de <span style="color:var(--brand)">mecedoras y muebles</span>.</h1>
+        <p>Servicio a domicilio en Tasajera, Magdalena. Retapizamos, cambiamos espuma, reparamos estructura y dejamos tus muebles como nuevos. Presupuesto gratis por WhatsApp.</p>
+        <div class="badges">
+          <span class="badge">✔ Garantía de 12 meses</span>
+          <span class="badge">🚚 Servicio a domicilio</span>
+          <span class="badge">🪑 Mecedoras, sillas, sofás</span>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://wa.me/573002485609?text=Hola%20quiero%20cotizar%20un%20tapizado" target="_blank" rel="noopener">Pedir cotización por WhatsApp</a>
+          <a class="btn ghost" href="#contacto">Ver opciones de contacto</a>
+          <a class="btn ghost" href="https://facebook.com/tapizadoslosrobles" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-grid">
+          <div class="ph" aria-label="Sube una foto del antes">SUBE TU FOTO</div>
+          <div class="ph" aria-label="Sube una foto del después">SUBE TU FOTO</div>
+        </div>
+        <small style="color:var(--muted)">Consejo: reemplaza estos cuadros con tus fotos de trabajos (antes/después) para generar confianza.</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="section">
+    <div class="container">
+      <h2>Servicios</h2>
+      <p class="lead">Trabajamos con telas de alto tráfico, cuero, cuerina y espumas certificadas. Atendemos hogares, oficinas y restaurantes.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Tapizado de mecedoras</h3>
+          <ul class="list">
+            <li><span class="dot"></span> Cambio de espuma y resortes</li>
+            <li><span class="dot"></span> Refuerzo y ajuste de madera</li>
+            <li><span class="dot"></span> Acabados clásicos y modernos</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Sillas y sofás</h3>
+          <ul class="list">
+            <li><span class="dot"></span> Retapizado completo o parcial</li>
+            <li><span class="dot"></span> Limpieza profunda y restauración</li>
+            <li><span class="dot"></span> Asesoría en telas y colores</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Restauración de madera</h3>
+          <ul class="list">
+            <li><span class="dot"></span> Encolado y nivelación</li>
+            <li><span class="dot"></span> Lijado, tintillado y lacado</li>
+            <li><span class="dot"></span> Reemplazo de piezas dañadas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="section" style="background:linear-gradient(180deg,#fff, #fbfbff)">
+    <div class="container">
+      <h2>Galería (antes / después)</h2>
+      <p class="lead">Sube 6–8 fotos destacadas de tus mejores trabajos. Nombres de archivo recomendados: antes-1.jpg, despues-1.jpg, etc.</p>
+      <div class="grid" aria-label="Galería de trabajos">
+        <div class="ph">FOTO</div>
+        <div class="ph">FOTO</div>
+        <div class="ph">FOTO</div>
+        <div class="ph">FOTO</div>
+        <div class="ph">FOTO</div>
+        <div class="ph">FOTO</div>
+        <div class="ph">FOTO</div>
+        <div class="ph">FOTO</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Opiniones de clientes</h2>
+      <div class="testis">
+        <div class="quote">“Me dejaron la mecedora como nueva. Trabajo impecable y muy puntuales.”<br><strong>— Ana M.</strong></div>
+        <div class="quote">“Excelente asesoría en telas. El sofá del living quedó hermoso. Recomendados.”<br><strong>— Carlos R.</strong></div>
+        <div class="quote">“Buen precio y calidad. Volveré a contratarlos.”<br><strong>— Juliana P.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section" style="background:var(--brand-2)">
+    <div class="container contact">
+      <div>
+        <h2>Contacto y cotizaciones</h2>
+        <p class="lead">Cuéntanos qué mueble quieres tapizar o restaurar y, si puedes, adjunta fotos. Respondemos el mismo día.</p>
+        <form action="mailto:tutaller@email.com" method="post" enctype="text/plain">
+          <input type="text" name="Nombre" placeholder="Tu nombre" required>
+          <input type="tel" name="Teléfono" placeholder="Tu teléfono" required>
+          <input type="text" name="Ciudad" placeholder="Ciudad / Barrio" required>
+          <textarea name="Mensaje" placeholder="Describe el trabajo (tipo de mueble, medidas, tela)"></textarea>
+          <div class="cta">
+            <button class="btn" type="submit">Enviar</button>
+            <a class="btn ghost" href="https://wa.me/573002485609?text=Hola%20quiero%20cotizar%20un%20tapizado" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+        </form>
+      </div>
+      <div class="card">
+        <h3>Datos del taller</h3>
+        <p><strong>Tel/WhatsApp:</strong><br>
+          <a href="tel:+573002485609">+57 300 248 5609</a><br>
+          <a href="tel:+573022571498">+57 302 257 1498</a><br>
+          <a href="tel:+573012978306">+57 301 297 8306</a>
+        </p>
+        <p><strong>Horario:</strong> L–S 8:00–15:00</p>
+        <p><strong>Dirección:</strong> Tasajera, Magdalena, Colombia – Servicio a domicilio</p>
+        <p><strong>Facebook:</strong> <a href="https://facebook.com/tapizadoslosrobles" target="_blank" rel="noopener">Tapizados Los Robles</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+      <div>© <span id="y"></span> Tapizados Los Robles • Todos los derechos reservados</div>
+      <div style="display:flex;gap:.7rem;align-items:center">
+        <a href="#" aria-label="Política de privacidad">Privacidad</a>
+        <span aria-hidden="true">•</span>
+        <a href="#" aria-label="Términos de servicio">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
