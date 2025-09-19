@@ -15,13 +15,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root{
-      --brand:#2F5D3A;      /* Verde bosque */
+      --brand:#2F5D3A;      /* Verde bosque (marca) */
       --brand-2:#EAF1EC;    /* Claro complementario */
       --ink:#0f172a;
       --muted:#475569;
       --bg:#ffffff;
       --ok:#16a34a;
-      --warn:#f59e0b;
       --radius:16px;
       --shadow:0 10px 30px rgba(15,23,42,.10);
     }
@@ -58,9 +57,6 @@
     .dot{width:8px;height:8px;border-radius:999px;background:var(--ok);margin-top:.5rem;flex:0 0 8px}
     .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
     .cta{display:flex;flex-wrap:wrap;gap:.7rem}
-    .before-after{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-    .ba-item{position:relative}
-    .ba-item span{position:absolute;left:.7rem;top:.7rem;background:rgba(0,0,0,.65);color:#fff;padding:.25rem .5rem;border-radius:6px;font-size:.85rem}
     .testis{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
     .quote{background:#fff;border:1px solid #eef;border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow);font-size:.98rem}
     .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
@@ -72,7 +68,6 @@
       .hero .wrap{grid-template-columns:1fr}
       .cards{grid-template-columns:1fr}
       .grid{grid-template-columns:repeat(2,1fr)}
-      .before-after{grid-template-columns:1fr}
       .testis{grid-template-columns:1fr}
       .contact{grid-template-columns:1fr}
     }
@@ -172,74 +167,22 @@
   <section id="galeria" class="section" style="background:linear-gradient(180deg,#fff, #fbfbff)">
     <div class="container">
       <h2>Galería (antes / después)</h2>
-      <p class="lead">Sube 6–8 fotos destacadas de tus mejores trabajos. Nombres de archivo recomendados: antes-1.jpg, despues-1.jpg, etc.</p>
+      <p class="lead">Sube tus fotos a la carpeta <code>fotos/</code> del repositorio y reemplaza abajo los ejemplos por tus archivos reales.</p>
+
+      <!-- EJEMPLOS: reemplázalos por tus imágenes reales -->
       <div class="grid" aria-label="Galería de trabajos">
-        <div class="ph">FOTO</div>
-        <div class="ph">FOTO</div>
-        <div class="ph">FOTO</div>
-        <div class="ph">FOTO</div>
-        <div class="ph">FOTO</div>
-        <div class="ph">FOTO</div>
-        <div class="ph">FOTO</div>
-        <div class="ph">FOTO</div>
+        <img src="fotos/antes-1.jpg" alt="Antes - mecedora">
+        <img src="fotos/despues-1.jpg" alt="Después - mecedora">
+        <img src="fotos/sofa-antes.jpg" alt="Antes - sofá">
+        <img src="fotos/sofa-despues.jpg" alt="Después - sofá">
+        <img src="fotos/silla-antes.jpg" alt="Antes - silla">
+        <img src="fotos/silla-despues.jpg" alt="Después - silla">
+        <img src="fotos/banqueta-antes.jpg" alt="Antes - banqueta">
+        <img src="fotos/banqueta-despues.jpg" alt="Después - banqueta">
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <h2>Opiniones de clientes</h2>
-      <div class="testis">
-        <div class="quote">“Me dejaron la mecedora como nueva. Trabajo impecable y muy puntuales.”<br><strong>— Ana M.</strong></div>
-        <div class="quote">“Excelente asesoría en telas. El sofá del living quedó hermoso. Recomendados.”<br><strong>— Carlos R.</strong></div>
-        <div class="quote">“Buen precio y calidad. Volveré a contratarlos.”<br><strong>— Juliana P.</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contacto" class="section" style="background:var(--brand-2)">
-    <div class="container contact">
-      <div>
-        <h2>Contacto y cotizaciones</h2>
-        <p class="lead">Cuéntanos qué mueble quieres tapizar o restaurar y, si puedes, adjunta fotos. Respondemos el mismo día.</p>
-        <form action="mailto:tutaller@email.com" method="post" enctype="text/plain">
-          <input type="text" name="Nombre" placeholder="Tu nombre" required>
-          <input type="tel" name="Teléfono" placeholder="Tu teléfono" required>
-          <input type="text" name="Ciudad" placeholder="Ciudad / Barrio" required>
-          <textarea name="Mensaje" placeholder="Describe el trabajo (tipo de mueble, medidas, tela)"></textarea>
-          <div class="cta">
-            <button class="btn" type="submit">Enviar</button>
-            <a class="btn ghost" href="https://wa.me/573002485609?text=Hola%20quiero%20cotizar%20un%20tapizado" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-          </div>
-        </form>
-      </div>
-      <div class="card">
-        <h3>Datos del taller</h3>
-        <p><strong>Tel/WhatsApp:</strong><br>
-          <a href="tel:+573002485609">+57 300 248 5609</a><br>
-          <a href="tel:+573022571498">+57 302 257 1498</a><br>
-          <a href="tel:+573012978306">+57 301 297 8306</a>
-        </p>
-        <p><strong>Horario:</strong> L–S 8:00–15:00</p>
-        <p><strong>Dirección:</strong> Tasajera, Magdalena, Colombia – Servicio a domicilio</p>
-        <p><strong>Facebook:</strong> <a href="https://facebook.com/tapizadoslosrobles" target="_blank" rel="noopener">Tapizados Los Robles</a></p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
-      <div>© <span id="y"></span> Tapizados Los Robles • Todos los derechos reservados</div>
-      <div style="display:flex;gap:.7rem;align-items:center">
-        <a href="#" aria-label="Política de privacidad">Privacidad</a>
-        <span aria-hidden="true">•</span>
-        <a href="#" aria-label="Términos de servicio">Términos</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+      <h2>Opiniones de c
