@@ -10,9 +10,11 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="" />
   <meta name="theme-color" content="#2F5D3A" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --brand:#2F5D3A;      /* Verde bosque (marca) */
@@ -46,6 +48,7 @@
     .hero-card{background:#fff;border:1px solid #eef;border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow);display:grid;gap:1rem}
     .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
     .ph{display:grid;place-items:center;aspect-ratio:4/3;background:linear-gradient(145deg,#fafafa,#f3f4f6);border:1px dashed #e5e7eb;border-radius:12px;color:#94a3b8;font-weight:700}
+
     .section{padding:3rem 0}
     .section h2{font-size:1.8rem;margin:0 0 .6rem}
     .section p.lead{color:var(--muted);margin-top:0}
@@ -55,15 +58,20 @@
     .list{list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:.45rem}
     .list li{display:flex;gap:.6rem;align-items:flex-start}
     .dot{width:8px;height:8px;border-radius:999px;background:var(--ok);margin-top:.5rem;flex:0 0 8px}
+
     .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
     .cta{display:flex;flex-wrap:wrap;gap:.7rem}
+
     .testis{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
     .quote{background:#fff;border:1px solid #eef;border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow);font-size:.98rem}
+
     .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
     form{display:grid;gap:.7rem}
     input, textarea{width:100%;padding:.8rem;border-radius:12px;border:1px solid #e5e7eb;font:inherit}
     textarea{min-height:120px;resize:vertical}
+
     footer{padding:2rem 0;border-top:1px solid #eef;color:#64748b}
+
     @media (max-width: 880px){
       .hero .wrap{grid-template-columns:1fr}
       .cards{grid-template-columns:1fr}
@@ -71,11 +79,13 @@
       .testis{grid-template-columns:1fr}
       .contact{grid-template-columns:1fr}
     }
+
     /* Galería: recorte uniforme y pies de foto */
     .grid figure{margin:0}
     .grid img{width:100%;height:260px;object-fit:cover}
     .grid figcaption{font-size:.9rem;color:#475569;margin-top:.35rem}
   </style>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -173,14 +183,24 @@
       <h2>Galería (antes / después)</h2>
       <p class="lead">Fotos reales de nuestros trabajos.</p>
 
-      <!-- Si tu archivo real fuera PNG, cambia .jpg por .png en las dos líneas de abajo -->
       <div class="grid" aria-label="Galería de trabajos">
         <figure>
-          <img src="fotos/antes-1.jpg?v=2" alt="Antes - mecedora 1" loading="lazy">
+          <picture>
+            <source srcset="fotos/antes-1.jpg?v=3">
+            <source srcset="fotos/antes-1.JPG?v=3">
+            <img src="fotos/antes-1.jpg?v=3" alt="Antes - mecedora 1" loading="lazy">
+          </picture>
           <figcaption>Antes – mecedora 1</figcaption>
         </figure>
+
         <figure>
-          <img src="fotos/despues-1.jpg?v=2" alt="Después - mecedora 1" loading="lazy">
+          <picture>
+            <!-- Probamos varias extensiones por si el archivo real difiere -->
+            <source srcset="fotos/despues-1.jpg?v=3">
+            <source srcset="fotos/despues-1.JPG?v=3">
+            <source srcset="fotos/despues-1.png?v=3">
+            <img src="fotos/despues-1.jpg?v=3" alt="Después - mecedora 1" loading="lazy">
+          </picture>
           <figcaption>Después – mecedora 1</figcaption>
         </figure>
       </div>
