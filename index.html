@@ -185,4 +185,64 @@
 
   <section class="section">
     <div class="container">
-      <h2>Opiniones de c
+      <h2>Opiniones de clientes</h2>
+      <div class="testis">
+        <div class="quote">“Me dejaron la mecedora como nueva. Trabajo impecable y muy puntuales.”<br><strong>— Ana M.</strong></div>
+        <div class="quote">“Excelente asesoría en telas. El sofá del living quedó hermoso. Recomendados.”<br><strong>— Carlos R.</strong></div>
+        <div class="quote">“Buen precio y calidad. Volveré a contratarlos.”<br><strong>— Juliana P.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section" style="background:var(--brand-2)">
+    <div class="container contact">
+      <div>
+        <h2>Contacto y cotizaciones</h2>
+        <p class="lead">Cuéntanos qué mueble quieres tapizar o restaurar y, si puedes, adjunta fotos. Respondemos el mismo día.</p>
+
+        <!-- Cambia el correo por el tuyo real -->
+        <form action="mailto:tapizadoslosrobles@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="Nombre" placeholder="Tu nombre" required>
+          <input type="tel" name="Teléfono" placeholder="Tu teléfono" required>
+          <input type="text" name="Ciudad" placeholder="Ciudad / Barrio" required>
+          <textarea name="Mensaje" placeholder="Describe el trabajo (tipo de mueble, medidas, tela)"></textarea>
+          <div class="cta">
+            <button class="btn" type="submit">Enviar</button>
+            <a class="btn ghost" href="https://wa.me/573002485609?text=Hola%20quiero%20cotizar%20un%20tapizado" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            <!-- Botones extra de WhatsApp (opcional) -->
+            <a class="btn ghost" href="https://wa.me/573022571498?text=Hola%20quiero%20cotizar%20un%20tapizado" target="_blank" rel="noopener">WhatsApp 302 257 1498</a>
+            <a class="btn ghost" href="https://wa.me/573012978306?text=Hola%20quiero%20cotizar%20un%20tapizado" target="_blank" rel="noopener">WhatsApp 301 297 8306</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Datos del taller</h3>
+        <p><strong>Tel/WhatsApp:</strong><br>
+          <a href="tel:+573002485609">+57 300 248 5609</a><br>
+          <a href="tel:+573022571498">+57 302 257 1498</a><br>
+          <a href="tel:+573012978306">+57 301 297 8306</a>
+        </p>
+        <p><strong>Horario:</strong> L–S 8:00–15:00</p>
+        <p><strong>Dirección:</strong> Tasajera, Magdalena, Colombia – Servicio a domicilio</p>
+        <p><strong>Facebook:</strong> <a href="https://facebook.com/tapizadoslosrobles" target="_blank" rel="noopener">Tapizados Los Robles</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+      <div>© <span id="y"></span> Tapizados Los Robles • Todos los derechos reservados</div>
+      <div style="display:flex;gap:.7rem;align-items:center">
+        <a href="#" aria-label="Política de privacidad">Privacidad</a>
+        <span aria-hidden="true">•</span>
+        <a href="#" aria-label="Términos de servicio">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
